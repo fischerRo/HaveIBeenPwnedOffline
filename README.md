@@ -27,5 +27,12 @@ To run the script in interactive mode without displaying plain passwords:
 python binary_search.py -i
 ```
 
+To run the script in batch mode with a given CSV file (e.g. exported using "keepassxc" to /dev/shm/user/passwords.csv [directory created before with "mkdir -m 700 /dev/shm/user"):
+
+```shell
+python binary_search.py -c /dev/shm/user/passwords.csv
+python binary_search.py -q -c /dev/shm/user/passwords.csv | egrep -v '(relax|empty|PIN)'
+```
+
 If the password contains characters which could be encoded 
 differently with different encodings 
