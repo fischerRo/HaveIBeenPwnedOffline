@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
-from __future__ import division, print_function, unicode_literals
 from hashlib import sha1
 from os import stat
 from argparse import ArgumentParser
@@ -75,7 +74,7 @@ if __name__ == "__main__":
                                         ' will search for the hash in the list.')
     parser.add_argument('passwords', nargs='*')
     parser.add_argument('-f', '--pwned-passwords-ordered-by-hash-filename', dest='password_file', required=False,
-                        default="pwned-passwords-sha1-ordered-by-hash-v4.txt", help='use a different password file')
+                        default="pwned-passwords-sha1-ordered-by-hash-v5.txt", help='use a different password file')
     parser.add_argument('-i', '--interactive', dest='interactive', action='store_true', required=False, help='ask for password(s) interactively.')
     args = parser.parse_args()
     with open(args.password_file, 'r') as pwned_passwords_file:
